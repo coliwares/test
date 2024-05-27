@@ -11,7 +11,7 @@ FROM nginx:alpine
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # Copy the built application files from the previous stage
-COPY --from=my-app-build /app/dist/pokedex-app/browser /usr/share/nginx/html
+COPY --from=my-app-build /app/dist/test/browser /usr/share/nginx/html
 
 # Expose port 80 for incoming traffic
 EXPOSE 80
